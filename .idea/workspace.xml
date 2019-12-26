@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fefe019-f0dd-45f4-8c24-055bccb34db9" name="Default Changelist" comment="" />
+    <list default="true" id="1fefe019-f0dd-45f4-8c24-055bccb34db9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/DisplayArea.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/MenuArea.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/mainScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/mainSceneStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/widgets/ImageTileWidget.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/data/AppState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/data/ImageData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/data/ObservableMat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/DisplayArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/MainWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/MenuArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/widgets/ImageTileWidget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/utils/ImageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/foury/utils/MiscUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/DisplayArea.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/MenuArea.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/mainScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/mainSceneStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/widgets/ImageTileWidget.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +57,26 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Foury" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ccae16c6-704b-4936-b297-36d62e7e72b2" />
+  </component>
   <component name="ProjectId" id="1VNh6fpXfPQlVIDr3jlDfPueKGL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,11 +84,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="foury.gui" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="foury.utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/foury/gui/widgets" />
+      <recent name="$PROJECT_DIR$/src/main/resources/foury" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,7 +127,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577099285644</updated>
-      <workItem from="1577099290446" duration="67000" />
+      <workItem from="1577099290446" duration="17504000" />
+      <workItem from="1577194428025" duration="1721000" />
+      <workItem from="1577206885381" duration="22588000" />
     </task>
     <servers />
   </component>
@@ -60,5 +141,33 @@
       <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="440" y="102" width="818" height="676" key="#Project_Structure/40.0.1880.1080@40.0.1880.1080" timestamp="1577099356092" />
+    <state x="793" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1577344522180">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="793" y="247" key="#com.intellij.ide.util.MemberChooser/40.0.1880.1080@40.0.1880.1080" timestamp="1577344522180" />
+    <state x="826" y="432" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1577100375039">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="826" y="432" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/40.0.1880.1080@40.0.1880.1080" timestamp="1577100375039" />
+    <state x="734" y="390" width="492" height="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577319152885">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="734" y="390" width="492" height="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/40.0.1880.1080@40.0.1880.1080" timestamp="1577319152885" />
+    <state x="642" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577315879827">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="642" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/40.0.1880.1080@40.0.1880.1080" timestamp="1577315879827" />
+    <state x="40" y="0" width="1880" height="1080" key="SettingsEditor" timestamp="1577206898728">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="40" y="0" width="1880" height="1080" key="SettingsEditor/40.0.1880.1080@40.0.1880.1080" timestamp="1577206898728" />
+    <state x="632" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1577194936241">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="632" y="367" key="com.intellij.ide.util.TipDialog/40.0.1880.1080@40.0.1880.1080" timestamp="1577194936241" />
+    <state x="643" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1577315450953">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="643" y="239" width="672" height="678" key="search.everywhere.popup/40.0.1880.1080@40.0.1880.1080" timestamp="1577315450953" />
   </component>
 </project>

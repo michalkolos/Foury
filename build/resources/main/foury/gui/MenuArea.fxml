@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="VBox"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="foury.gui.MenuArea"
+         VBox.vgrow="ALWAYS" maxWidth="Infinity">
+
+	<VBox>
+		<MenuBar>
+			<Menu text="File">
+				<items>
+					<MenuItem text="Open"/>
+					<Menu text="Save">
+
+					</Menu>
+				</items>
+			</Menu>
+
+			<Menu text="View">
+				<items>
+					<Menu text="Number of Image Tiles">
+						<items>
+							<MenuItem text="One tile" onAction="#handleSwitchToOneTile"/>
+							<MenuItem text="Two tiles" onAction="#handleSwitchToTwoTiles"/>
+							<MenuItem text="Three tiles" onAction="#handleSwitchToThreeTiles"/>
+							<MenuItem text="Four tiles" onAction="#handleSwitchToFourTiles"/>
+						</items>
+					</Menu>
+				</items>
+			</Menu>
+
+		</MenuBar>
+	</VBox>
+
+</fx:root>
