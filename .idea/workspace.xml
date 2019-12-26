@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fefe019-f0dd-45f4-8c24-055bccb34db9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/DisplayArea.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/MenuArea.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/mainScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/mainSceneStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/foury/gui/widgets/ImageTileWidget.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/data/AppState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/data/ImageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/data/ObservableMat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/DisplayArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/MainWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/MenuArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/gui/widgets/ImageTileWidget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/utils/ImageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/foury/utils/MiscUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/DisplayArea.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/MenuArea.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/mainScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/mainSceneStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/foury/gui/widgets/ImageTileWidget.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +86,7 @@
       <updated>1577099285644</updated>
       <workItem from="1577099290446" duration="17504000" />
       <workItem from="1577194428025" duration="1721000" />
-      <workItem from="1577206885381" duration="22588000" />
+      <workItem from="1577206885381" duration="22891000" />
     </task>
     <servers />
   </component>
