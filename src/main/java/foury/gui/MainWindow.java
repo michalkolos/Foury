@@ -2,6 +2,7 @@ package foury.gui;
 
 import foury.data.AppState;
 import foury.data.ImageData;
+import foury.gui.widgets.ImageTileWidget;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
@@ -11,18 +12,26 @@ import java.util.ResourceBundle;
 
 public class MainWindow implements Initializable {
 
+
+
 	ImageData imageData = null;
 	AppState appState =null;
 
+	@FXML
+	private VBox centerPane;
 	@FXML
 	private VBox topPane;
 	@FXML
 	private VBox leftPane;
 	@FXML
 	private VBox rightPane;
+	@FXML
+	private VBox bottomPane;
 
-	public MenuArea menuArea;
+	private MenuArea menuArea;
 	private DisplayArea displayArea;
+	private InfoArea infoArea;
+
 
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -30,14 +39,25 @@ public class MainWindow implements Initializable {
 		imageData = new ImageData();
 
 		displayArea = new DisplayArea(imageData, appState);
-		leftPane.getChildren().add(displayArea);
+		centerPane.getChildren().add(displayArea);
 
 		menuArea = new MenuArea(imageData, appState);
 		topPane.getChildren().add(menuArea);
 
-		displayArea.setTabNo(4);
+		infoArea = new InfoArea(imageData, appState);
+		bottomPane.getChildren().add(infoArea);
 
-		appState.setImagePaneNo(2);
+
+		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
+			if(newVal) {
+				System.out.println("ReadyToDisplay listener triggered");
+
+				displayArea.updateImages();
+
+
+				imageData.setReadyToDisplay(false);
+			}
+		});
 
 	}
 }

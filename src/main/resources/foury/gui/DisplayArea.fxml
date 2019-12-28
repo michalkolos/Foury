@@ -9,7 +9,8 @@
 <fx:root type="VBox"
          xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="foury.gui.DisplayArea">
+        fx:controller="foury.gui.DisplayArea"
+         VBox.vgrow="ALWAYS" maxWidth="Infinity">
 
 	<HBox fx:id="imageDisplayWindows">
 

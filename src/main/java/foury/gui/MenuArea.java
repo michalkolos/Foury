@@ -1,11 +1,11 @@
 package foury.gui;
 
+import foury.actions.FileAction;
 import foury.data.AppState;
 import foury.data.ImageData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import java.util.concurrent.SubmissionPublisher;
 
 public class MenuArea extends Area {
 
@@ -17,6 +17,12 @@ public class MenuArea extends Area {
 	@FXML
 	public void initialize() {
 
+	}
+
+	@FXML
+	private void handleOpenFile(final ActionEvent actionEvent) {
+		FileAction fileAction = new FileAction(imageData, appState);
+		fileAction.open();
 	}
 
 	@FXML

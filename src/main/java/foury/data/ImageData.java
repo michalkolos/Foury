@@ -8,13 +8,6 @@ import org.opencv.core.Mat;
 
 public class ImageData {
 
-	private Mat originalMat = null;
-//	private Mat fourierComplex = null;
-	private Mat fourierMagnitude = null;
-	private Mat mask = null;
-	private Mat outputTotal = null;
-	private Mat outputInner = null;
-	private Mat outputOuter = null;
 
 	private Image originalImage = null;
 	private Mat fourierComplex = null;
@@ -29,13 +22,6 @@ public class ImageData {
 
 
 	public ImageData(){
-		originalMat = generatePlaceholderMat(400, 400);
-//		fourierComplex = generatePlaceholderMat(400, 400);
-//		fourierMagnitude = generatePlaceholderMat(400, 400);
-//		mask  = generatePlaceholderMat(400, 400);
-//		outputTotal = generatePlaceholderMat(400, 400);
-//		outputInner = generatePlaceholderMat(400, 400);
-//		outputOuter = generatePlaceholderMat(400, 400);
 
 		readyToCalculate = new SimpleBooleanProperty(false);
 		readyToDisplay = new SimpleBooleanProperty(false);
@@ -59,14 +45,6 @@ public class ImageData {
 
 		return outputMat;
 	}
-
-
-
-
-
-
-
-
 
 
 
@@ -107,69 +85,14 @@ public class ImageData {
 
 
 
-	public Mat getOriginalMat() {
-		return originalMat;
-	}
-
-	public void setOriginalMat(Mat originalMat) {
-		this.originalMat = originalMat;
-	}
-
-	public Mat getFourierComplex() {
-		return fourierComplex;
-	}
-
-	public void setFourierComplex(Mat fourierComplex) {
-		this.fourierComplex = fourierComplex;
-	}
-
-	public Mat getFourierMagnitude() {
-		return fourierMagnitude;
-	}
-
-	public void setFourierMagnitude(Mat fourierMagnitude) {
-		this.fourierMagnitude = fourierMagnitude;
-	}
-
-	public Mat getMask() {
-		return mask;
-	}
-
-	public void setMask(Mat mask) {
-		this.mask = mask;
-	}
-
-	public Mat getOutputTotal() {
-		return outputTotal;
-	}
-
-	public void setOutputTotal(Mat outputTotal) {
-		this.outputTotal = outputTotal;
-	}
-
-	public Mat getOutputInner() {
-		return outputInner;
-	}
-
-	public void setOutputInner(Mat outputInner) {
-		this.outputInner = outputInner;
-	}
-
-	public Mat getOutputOuter() {
-		return outputOuter;
-	}
-
-	public void setOutputOuter(Mat outputOuter) {
-		this.outputOuter = outputOuter;
-	}
 
 
-	public Image getOriginalImage() {
-		return originalImage;
-	}
+	public Image getOriginalImage() { return originalImage;	}
 
 	public void setOriginalImage(Image originalImage) {
 		this.originalImage = originalImage;
+		this.readyToDisplay.set(true);
+		this.readyToCalculate.set(true);
 	}
 
 	public Image getFourierMagnitudeImage() {

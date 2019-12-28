@@ -11,23 +11,27 @@
          fx:controller="foury.gui.widgets.ImageTileWidget"
          xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml/1"
-         tabClosingPolicy="UNAVAILABLE">
+         tabClosingPolicy="UNAVAILABLE"
+		 fx:id="tabPaneRoot">
 
-	<Tab text="Original" fx:id="originalTab" >
-        <ImageView fx:id="originalView"/>
+	<Tab text="Original" fx:id="originalTab">
+			<ImageView fx:id="originalView"/>
 	</Tab>
+
 	<Tab text="Magnitude" fx:id="magnitudeTab">
-		<ImageView fx:id="magnitudeView"/>
+			<ImageView fx:id="magnitudeView"/>
 	</Tab>
+
 	<Tab text="Output" fx:id="outputFullTab">
-		<ImageView fx:id="outputFullView"/>
+			<ImageView fx:id="outputFullView"/>
 	</Tab>
+
 	<Tab text="Selection" fx:id="outputSelectionTab">
-		<ImageView fx:id="outputSelectionView"/>
+			<ImageView fx:id="outputSelectionView"/>
 	</Tab>
 
 	<Tab text="Outside" fx:id="outputOutsideTab">
-		<ImageView fx:id="outputOutsideView"/>
+			<ImageView fx:id="outputOutsideView"/>
 	</Tab>
 
 </fx:root>

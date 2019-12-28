@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import foury.gui.widgets.ImageTileWidget?>
-<?import foury.gui.DisplayArea?>
-<?import foury.gui.MenuArea?>
 <VBox fx:id="vbox"
       maxHeight="Infinity"
       maxWidth="Infinity"
@@ -29,16 +23,28 @@
 
 		<left>
 			<VBox fx:id="leftPane">
-				<Label text="Image Area"/>
+
 			</VBox>
 
 		</left>
+
+		<center>
+			<VBox fx:id="centerPane">
+
+			</VBox>
+		</center>
 
 		<right>
 			<VBox fx:id="rightPane" minWidth="400" prefWidth="400" maxWidth="400">
 				<Label text="Tool area"/>
 			</VBox>
 		</right>
+
+		<bottom>
+			<VBox fx:id="bottomPane">
+
+			</VBox>
+		</bottom>
 
 	</BorderPane>
 
