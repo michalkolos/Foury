@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root type="VBox"
+         fx:controller="foury.gui.widgets.EditorWidget"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml/1"
+		 fx:id="editorRoot">
+
+	<ImageView fx:id="editorImage"/>
+	<StackPane>
+		<HBox fx:id="editorLayerInactive">
+			<Button fx:id="addButton" text="Add" onAction="#setAddButton"/>
+		</HBox>
+		<HBox fx:id="editorLayerActive">
+			<Button fx:id="finishButton" text="Finish" onAction="#setFinishButton"/>
+			<Button fx:id="cancelButton" text="Cancel" onAction="#setCancelButton"/>
+		</HBox>
+
+	</StackPane>
+	<VBox fx:id="rectangleWidgetStack"/>
+
+
+</fx:root>

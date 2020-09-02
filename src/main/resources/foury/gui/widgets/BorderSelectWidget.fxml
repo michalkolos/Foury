@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.SegmentedButton?>
+<?import foury.gui.SegmentableToggleButton?>
+<fx:root type="VBox"
+         fx:controller="foury.gui.widgets.BorderSelectWidget"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml/1">
+
+<!--	<HBox>-->
+<!--		<Label text="Border type: "/>-->
+<!--		<ToggleButton fx:id="borderCons" text="Constant"/>-->
+<!--		<ToggleButton fx:id="borderRepl" text="Replicate"/>-->
+<!--		<ToggleButton fx:id="borderRefl" text="Reflect"/>-->
+<!--		<ToggleButton fx:id="borderWrap" text="Wrap"/>-->
+<!--	</HBox>-->
+
+	<SegmentedButton maxWidth="Infinity" prefWidth="Infinity" fx:id="segButton">
+		<buttons>
+			<fx:define>
+				<ToggleGroup fx:id="albumViewToggleGroup"/>
+			</fx:define>
+			<SegmentableToggleButton maxWidth="Infinity" prefWidth="${segButton.width / 4}" fx:id="borderCons" text="Constant" selected="true" toggleGroup="$albumViewToggleGroup"/>
+			<SegmentableToggleButton maxWidth="Infinity" prefWidth="${segButton.width / 4}" fx:id="borderRepl" text="Replicate" toggleGroup="$albumViewToggleGroup"/>
+			<SegmentableToggleButton maxWidth="Infinity" prefWidth="${segButton.width / 4}" fx:id="borderRefl" text="Reflect" toggleGroup="$albumViewToggleGroup"/>
+			<SegmentableToggleButton maxWidth="Infinity" prefWidth="${segButton.width / 4}" fx:id="borderWrap" text="Wrap" toggleGroup="$albumViewToggleGroup"/>
+		</buttons>
+	</SegmentedButton>
+
+	<HBox>
+		<Label text="Constant value: "/>
+		<TextField fx:id="borderValField" maxWidth="50"/>
+		<BorderPane>
+			<center>
+				<Slider fx:id="borderValSlider" max="255" prefWidth="240"/>
+			</center>
+		</BorderPane>
+	</HBox>
+
+</fx:root>

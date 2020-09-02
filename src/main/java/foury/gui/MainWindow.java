@@ -1,5 +1,6 @@
 package foury.gui;
 
+import foury.actions.FourierAction;
 import foury.data.AppState;
 import foury.data.ImageData;
 import foury.gui.widgets.ImageTileWidget;
@@ -31,12 +32,16 @@ public class MainWindow implements Initializable {
 	private MenuArea menuArea;
 	private DisplayArea displayArea;
 	private InfoArea infoArea;
+	private ToolsArea toolsArea;
 
+	private FourierAction fourierAction;
 
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		appState = AppState.getCurrentState();
 		imageData = new ImageData();
+
+		fourierAction = new FourierAction(imageData, appState);
 
 		displayArea = new DisplayArea(imageData, appState);
 		centerPane.getChildren().add(displayArea);
@@ -47,6 +52,11 @@ public class MainWindow implements Initializable {
 		infoArea = new InfoArea(imageData, appState);
 		bottomPane.getChildren().add(infoArea);
 
+		toolsArea = new ToolsArea(imageData, appState);
+		rightPane.getChildren().add(toolsArea);
+
+
+
 
 		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
 			if(newVal) {
@@ -56,6 +66,14 @@ public class MainWindow implements Initializable {
 
 
 				imageData.setReadyToDisplay(false);
+			}
+		});
+
+		imageData.readyToCalculateProperty().addListener((obs, oldVal, newVal) -> {
+			if(newVal) {
+				System.out.println("ReadyToCalculate listener triggered");
+
+				fourierAction.transform();
 			}
 		});
 

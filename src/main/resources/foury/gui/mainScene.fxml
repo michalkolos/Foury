@@ -36,7 +36,7 @@
 
 		<right>
 			<VBox fx:id="rightPane" minWidth="400" prefWidth="400" maxWidth="400">
-				<Label text="Tool area"/>
+
 			</VBox>
 		</right>
 

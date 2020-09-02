@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="VBox"
+         fx:controller="foury.gui.widgets.RectangleWidget"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml/1">
+
+	<HBox>
+		<Label text="X: "/>
+	    <TextField fx:id="xCoordTextField"/>
+
+		<Label text="Y: "/>
+		<TextField fx:id="yCoordTextField"/>
+
+		<Separator orientation="VERTICAL"/>
+
+		<Label text="W: "/>
+		<TextField fx:id="widthTextField"/>
+
+		<Label text="H: "/>
+		<TextField fx:id="heightTextField"/>
+
+		<Separator orientation="VERTICAL"/>
+
+		<Label text="Val: "/>
+		<TextField fx:id="valueTextField"/>
+
+		<Separator/>
+
+		<Button fx:id="editButton" text="Edit" onAction="#setEditButton"/>
+		<Button fx:id="deleteButton" text="Delete" onAction="#setDeleteButton"/>
+	</HBox>
+
+</fx:root>

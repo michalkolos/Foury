@@ -6,15 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
 <fx:root type="VBox"
+         fx:controller="foury.gui.widgets.ImageAreaWidget"
          xmlns="http://javafx.com/javafx"
-         xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="foury.gui.InfoArea"
-         VBox.vgrow="ALWAYS" maxWidth="Infinity">
+         xmlns:fx="http://javafx.com/fxml/1">
 
-	<Label fx:id="label01"/>
-	<Label fx:id="label02"/>
-	<Label fx:id="label03"/>
-
+	<ScrollPane fx:id="scrollPane"/>
 
 </fx:root>
+
