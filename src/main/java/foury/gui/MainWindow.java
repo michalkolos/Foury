@@ -74,6 +74,18 @@ public class MainWindow implements Initializable {
 				System.out.println("ReadyToCalculate listener triggered");
 
 				fourierAction.transform();
+
+				imageData.setReadyToCalculate(false);
+			}
+		});
+
+		imageData.readyToCalculateSelectionProperty().addListener((obs, oldVal, newVal) -> {
+			if(newVal) {
+				System.out.println("ReadyToCalculateSelection listener triggered");
+
+				fourierAction.transformSelections();
+
+				imageData.setReadyToCalculateSelection(false);
 			}
 		});
 

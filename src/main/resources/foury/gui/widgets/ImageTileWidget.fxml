@@ -31,6 +31,7 @@
 				<children>
 					<Button fx:id="maskSaveButton" text="OK" onAction="#handleSaveMaskButtonAction"/>
 					<Button fx:id="maskEraseButton" text="Erase" onAction="#handleEraseButtonAction"/>
+					<Button fx:id="maskClearButton" text="Clear" onAction="#handleClearButtonAction"/>
 				</children>
 			</HBox>
 

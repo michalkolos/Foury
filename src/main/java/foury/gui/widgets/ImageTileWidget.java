@@ -58,11 +58,6 @@ public class ImageTileWidget extends TabPane {
 	@FXML
 	private Tab outputOutsideTab;
 
-	@FXML
-	private Button maskSaveButton;
-	@FXML
-	private Button maskEraseButton;
-
 	private MouseBox currentMouseBox;
 
 	private ImageData imageData;
@@ -100,11 +95,16 @@ public class ImageTileWidget extends TabPane {
 	}
 
 	@FXML
-	private void handleSaveMaskButtonAction(final ActionEvent actionEvent) { saveMask(); }
+	private void handleSaveMaskButtonAction(final ActionEvent actionEvent) {
+		saveMask();
+		loadImages();
+	}
 
 	@FXML
 	private void handleEraseButtonAction(final ActionEvent actionEvent) { erase = !erase; }
 
+	@FXML
+	private void handleClearButtonAction(final ActionEvent actionEvent) { erase = !erase; }
 
 
 	public void loadImages(){
@@ -275,10 +275,19 @@ public class ImageTileWidget extends TabPane {
 
 	private void saveMask(){
 
+		imageData.setFourierMask(maskMat);
 		imageData.setMaskImage(ImageUtils.mat2Image(maskMat, ".png"));
-		imageData.setReadyToDisplay(true);
+
+		imageData.setReadyToCalculateSelection(true);
+//		imageData.setReadyToDisplay(true);
 
 	}
 
+	private void clearMask(){
+		imageData.getFourierMask().setTo(new Scalar(0));
+		GraphicsContext gc = maskCanvas.getGraphicsContext2D();
+		gc.clearRect(0, 0, maskCanvas.getWidth(), maskCanvas.getHeight());
 
+		imageData.setReadyToCalculateSelection(true);
+	}
 }

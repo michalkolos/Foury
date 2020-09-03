@@ -11,6 +11,7 @@ public class ImageData {
 
 	private Image originalImage = null;
 	private Mat fourierComplex = null;
+	private Mat fourierMask = null;
 	private Image fourierMagnitudeImage = null;
 	private Image maskImage = null;
 	private Image outputTotalImage = null;
@@ -21,12 +22,14 @@ public class ImageData {
 
 	private SimpleBooleanProperty readyToCalculate;
 	private SimpleBooleanProperty readyToDisplay;
+	private SimpleBooleanProperty readyToCalculateSelection;
 
 
 	public ImageData(){
 
 		readyToCalculate = new SimpleBooleanProperty(false);
 		readyToDisplay = new SimpleBooleanProperty(false);
+		readyToCalculateSelection = new SimpleBooleanProperty(false);
 	}
 
 
@@ -73,6 +76,7 @@ public class ImageData {
 		this.readyToCalculate.set(readyToCalculate);
 	}
 
+
 	public boolean isReadyToDisplay() {
 		return readyToDisplay.get();
 	}
@@ -86,6 +90,17 @@ public class ImageData {
 	}
 
 
+	public boolean isReadyToCalculateSelection() {
+		return readyToCalculateSelection.get();
+	}
+
+	public SimpleBooleanProperty readyToCalculateSelectionProperty() {
+		return readyToCalculateSelection;
+	}
+
+	public void setReadyToCalculateSelection(boolean readyToCalculateSelection) {
+		this.readyToCalculateSelection.set(readyToCalculateSelection);
+	}
 
 
 
@@ -143,5 +158,21 @@ public class ImageData {
 
 	public void setMouseBox(MouseBox mouseBox) {
 		this.mouseBox = mouseBox;
+	}
+
+	public Mat getFourierComplex() {
+		return fourierComplex;
+	}
+
+	public void setFourierComplex(Mat fourierComplex) {
+		this.fourierComplex = fourierComplex;
+	}
+
+	public Mat getFourierMask() {
+		return fourierMask;
+	}
+
+	public void setFourierMask(Mat fourierMask) {
+		this.fourierMask = fourierMask;
 	}
 }
