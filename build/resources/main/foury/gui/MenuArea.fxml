@@ -14,9 +14,9 @@
 			<Menu text="File">
 				<items>
 					<MenuItem text="Open" onAction="#handleOpenFile"/>
-					<Menu text="Save">
-
-					</Menu>
+					<MenuItem text="Save magnitude image" onAction="#handleSaveMagnitude"/>
+					<SeparatorMenuItem />
+					<MenuItem text="Exit" onAction="#handleExitAction"/>
 				</items>
 			</Menu>
 

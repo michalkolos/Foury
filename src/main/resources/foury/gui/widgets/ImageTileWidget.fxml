@@ -7,19 +7,39 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.canvas.Canvas?>
 <fx:root type="TabPane"
          fx:controller="foury.gui.widgets.ImageTileWidget"
          xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml/1"
          tabClosingPolicy="UNAVAILABLE"
-		 fx:id="tabPaneRoot">
+         fx:id="tabPaneRoot">
 
 	<Tab text="Original" fx:id="originalTab">
 			<ImageView fx:id="originalView"/>
 	</Tab>
 
 	<Tab text="Magnitude" fx:id="magnitudeTab">
+		<StackPane>
+<!--		<VBox>-->
+
 			<ImageView fx:id="magnitudeView"/>
+			<Canvas fx:id="maskCanvas"/>
+			<Canvas fx:id="selectionCanvas"/>
+
+			<HBox pickOnBounds="false">
+				<children>
+					<Button fx:id="maskSaveButton" text="OK" onAction="#handleSaveMaskButtonAction"/>
+					<Button fx:id="maskEraseButton" text="Erase" onAction="#handleEraseButtonAction"/>
+				</children>
+			</HBox>
+
+<!--		</VBox>-->
+		</StackPane>
+	</Tab>
+
+	<Tab text="Mask" fx:id="maskTab">
+			<ImageView fx:id="maskView"/>
 	</Tab>
 
 	<Tab text="Output" fx:id="outputFullTab">

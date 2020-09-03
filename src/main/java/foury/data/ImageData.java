@@ -17,6 +17,8 @@ public class ImageData {
 	private Image outputInnerImage = null;
 	private Image outputOuterImage = null;
 
+	private MouseBox mouseBox = null;
+
 	private SimpleBooleanProperty readyToCalculate;
 	private SimpleBooleanProperty readyToDisplay;
 
@@ -133,5 +135,13 @@ public class ImageData {
 
 	public void setOutputOuterImage(Image outputOuterImage) {
 		this.outputOuterImage = outputOuterImage;
+	}
+
+	public MouseBox getMouseBox() {
+		return mouseBox;
+	}
+
+	public void setMouseBox(MouseBox mouseBox) {
+		this.mouseBox = mouseBox;
 	}
 }
