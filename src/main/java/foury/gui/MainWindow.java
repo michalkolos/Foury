@@ -52,8 +52,8 @@ public class MainWindow implements Initializable {
 		infoArea = new InfoArea(imageData, appState);
 		bottomPane.getChildren().add(infoArea);
 
-		toolsArea = new ToolsArea(imageData, appState);
-		rightPane.getChildren().add(toolsArea);
+//		toolsArea = new ToolsArea(imageData, appState);
+//		rightPane.getChildren().add(toolsArea);
 
 
 

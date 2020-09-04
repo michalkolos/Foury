@@ -41,6 +41,9 @@ public class ImageTileWidget extends TabPane {
 	private ImageView outputOutsideView;
 
 	@FXML
+	private ImageAreaWidget originalViewController;
+
+	@FXML
 	private Canvas selectionCanvas;
 	@FXML
 	private Canvas maskCanvas;
@@ -111,6 +114,8 @@ public class ImageTileWidget extends TabPane {
 
 		originalView.setImage(imageData.getOriginalImage());
 		originalView.setVisible(true);
+
+//		originalViewController.displayImage(imageData.getOriginalImage());
 
 		magnitudeView.setImage(imageData.getFourierMagnitudeImage());
 		maskView.setImage(imageData.getMaskImage());

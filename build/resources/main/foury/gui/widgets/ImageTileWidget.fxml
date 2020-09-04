@@ -17,6 +17,7 @@
 
 	<Tab text="Original" fx:id="originalTab">
 			<ImageView fx:id="originalView"/>
+<!--				<fx:include source="ImageAreaWidget.fxml" fx:id="originalView"/>-->
 	</Tab>
 
 	<Tab text="Magnitude" fx:id="magnitudeTab">
