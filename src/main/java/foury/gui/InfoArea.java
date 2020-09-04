@@ -7,12 +7,12 @@ import javafx.scene.control.Label;
 
 public class InfoArea extends Area {
 
-	@FXML
-	private Label label01;
+//	@FXML
+//	private Label label01;
 	@FXML
 	private Label label02;
-	@FXML
-	private Label label03;
+//	@FXML
+//	private Label label03;
 
 	protected InfoArea(ImageData imageData, AppState appState) {
 		super(imageData, appState);
@@ -56,8 +56,8 @@ public class InfoArea extends Area {
 			dot = ".";
 		}
 
-		label01.setText("Panels: " + appState.getImagePaneNo());
+//		label01.setText("Panels: " + appState.getImagePaneNo());
 		label02.setText( appState.getFilePath() + appState.getFileName() + dot + appState.getFileExtension());
-		label03.setText("Border type: " + appState.getBorderType() + " | Constant Border Value: " + appState.getBorderConstVal());
+//		label03.setText("Border type: " + appState.getBorderType() + " | Constant Border Value: " + appState.getBorderConstVal());
 	}
 }

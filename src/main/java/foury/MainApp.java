@@ -19,7 +19,7 @@ public class MainApp extends Application {
 
 		scene.getStylesheets().add(getClass().getResource("gui/mainSceneStyle.css").toExternalForm());
 
-		stage.setTitle("Foury");
+		stage.setTitle("miniDFT");
 		stage.setScene(scene);
 		stage.setMaximized(true);
 		stage.show();

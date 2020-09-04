@@ -31,11 +31,11 @@ public class DisplayArea extends Area {
 
 
 
-		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
-			if(newVal) {
-				System.out.println("ReadyToDisplay listener triggered");
-				imageDisplayWindows.getChildren().add(new ImageView(imageData.getOriginalImage())); }
-		});
+//		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
+//			if(newVal) {
+//				System.out.println("ReadyToDisplay listener triggered");
+//				imageDisplayWindows.getChildren().add(new ImageView(imageData.getOriginalImage())); }
+//		});
 	}
 
 

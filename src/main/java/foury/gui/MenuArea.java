@@ -6,6 +6,7 @@ import foury.data.ImageData;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.MenuItem;
 
 
 public class MenuArea extends Area {
@@ -14,22 +15,59 @@ public class MenuArea extends Area {
 		super(imageData, appState);
 	}
 
+	@FXML
+	MenuItem saveMagnitudeOption;
+	@FXML
+	MenuItem saveSelectionOption;
+	@FXML
+	MenuItem saveOutsideOption;
+
+
+	FileAction fileAction;
 
 	@FXML
 	public void initialize() {
+		fileAction = new FileAction(imageData, appState);
 
+		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
+			if(imageData.getFourierMagnitudeImage() == null){
+				saveMagnitudeOption.setDisable(true);
+			}else{
+				saveMagnitudeOption.setDisable(false);
+			}
+
+			if(imageData.getOutputInnerImage() == null){
+				saveSelectionOption.setDisable(true);
+			}else{
+				saveSelectionOption.setDisable(false);
+			}
+
+			if(imageData.getOutputOuterImage() == null){
+				saveOutsideOption.setDisable(true);
+			}else{
+				saveOutsideOption.setDisable(false);
+			}
+		});
 	}
 
 	@FXML
 	private void handleOpenFile(final ActionEvent actionEvent) {
-		FileAction fileAction = new FileAction(imageData, appState);
 		fileAction.open();
 	}
 
 	@FXML
 	private void handleSaveMagnitude(final ActionEvent actionEvent) {
-		FileAction fileAction = new FileAction(imageData, appState);
 		fileAction.saveMagnitude();
+	}
+
+	@FXML
+	private void handleSaveSelection(final ActionEvent actionEvent) {
+		fileAction.saveSelection();
+	}
+
+	@FXML
+	private void handleSaveOutside(final ActionEvent actionEvent) {
+		fileAction.saveOutside();
 	}
 
 	@FXML

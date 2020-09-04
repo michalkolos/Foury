@@ -8,7 +8,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.ImageView;
@@ -66,6 +65,8 @@ public class ImageTileWidget extends TabPane {
 	private ImageData imageData;
 	private Mat maskMat;
 	private boolean erase = false;
+	private int selectedTab = 0;
+
 
 	public ImageTileWidget(){
 		this.imageData = new ImageData();
@@ -94,7 +95,19 @@ public class ImageTileWidget extends TabPane {
 
 	@FXML
 	public void initialize() {
+
 		loadImages();
+
+		imageData.readyToCalculateProperty().addListener((obs, oldVal, newVal) -> {
+			if(newVal) {
+				System.out.println("ReadyToCalculate listener triggered");
+				loadImages();
+			}
+		});
+
+		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
+				loadImages();
+		});
 	}
 
 	@FXML
@@ -107,10 +120,15 @@ public class ImageTileWidget extends TabPane {
 	private void handleEraseButtonAction(final ActionEvent actionEvent) { erase = !erase; }
 
 	@FXML
-	private void handleClearButtonAction(final ActionEvent actionEvent) { erase = !erase; }
+	private void handleClearButtonAction(final ActionEvent actionEvent) {
+		clearMask();
+		imageData.setReadyToDisplay(true);
+	}
+
 
 
 	public void loadImages(){
+		selectedTab = tabPaneRoot.getSelectionModel().getSelectedIndex();
 
 		originalView.setImage(imageData.getOriginalImage());
 		originalView.setVisible(true);
@@ -169,7 +187,17 @@ public class ImageTileWidget extends TabPane {
 
 		maskMat = new Mat((int)magnitudeView.getImage().getHeight(), (int)magnitudeView.getImage().getWidth(), CvType.CV_8U, new Scalar(255));
 
+		if(tabPaneRoot.getTabs().get(selectedTab).isDisabled()){
+			tabPaneRoot.getSelectionModel().select(0);
+		}else{
+			tabPaneRoot.getSelectionModel().select(selectedTab);
+		}
+
+
 	}
+
+
+
 
 	private void setMouselisteners(Node listenedArea){
 
@@ -211,6 +239,9 @@ public class ImageTileWidget extends TabPane {
 			}
 		});
 	}
+
+
+
 
 	private void drawRectangle(Canvas canvas) {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -283,16 +314,19 @@ public class ImageTileWidget extends TabPane {
 		imageData.setFourierMask(maskMat);
 		imageData.setMaskImage(ImageUtils.mat2Image(maskMat, ".png"));
 
+		GraphicsContext gc = maskCanvas.getGraphicsContext2D();
+		gc.clearRect(0, 0, maskCanvas.getWidth(), maskCanvas.getHeight());
+
 		imageData.setReadyToCalculateSelection(true);
 //		imageData.setReadyToDisplay(true);
 
 	}
 
 	private void clearMask(){
-		imageData.getFourierMask().setTo(new Scalar(0));
 		GraphicsContext gc = maskCanvas.getGraphicsContext2D();
 		gc.clearRect(0, 0, maskCanvas.getWidth(), maskCanvas.getHeight());
 
-		imageData.setReadyToCalculateSelection(true);
+		imageData.reset();
+		imageData.setReadyToCalculate(true);
 	}
 }

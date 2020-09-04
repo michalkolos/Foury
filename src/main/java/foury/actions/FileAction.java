@@ -26,14 +26,14 @@ public class FileAction extends Action {
 	public void open(){
 
 		FileChooser fileChooser = new FileChooser();
-		fileChooser.getExtensionFilters().addAll(
-				new FileChooser.ExtensionFilter("JPG", "*.jpg"),
-				new FileChooser.ExtensionFilter("JPG", "*.jpeg"),
-				new FileChooser.ExtensionFilter("JPG", "*.JPG"),
-				new FileChooser.ExtensionFilter("JPG", "*.JPEG"),
-				new FileChooser.ExtensionFilter("PNG", "*.png"),
-				new FileChooser.ExtensionFilter("PNG", "*.PNG")
-		);
+//		fileChooser.getExtensionFilters().addAll(
+//				new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+//				new FileChooser.ExtensionFilter("JPG", "*.jpeg"),
+//				new FileChooser.ExtensionFilter("JPG", "*.JPG"),
+//				new FileChooser.ExtensionFilter("JPG", "*.JPEG"),
+//				new FileChooser.ExtensionFilter("PNG", "*.png"),
+//				new FileChooser.ExtensionFilter("PNG", "*.PNG")
+//		);
 
 		File selectedFile = fileChooser.showOpenDialog(new Stage());
 		Image image  = new Image(selectedFile.toURI().toString());
@@ -50,10 +50,29 @@ public class FileAction extends Action {
 		image = ImageUtils.mat2Image(mat, "." + appState.getFileExtension());
 
 		imageData.setOriginalImage(image);
-		appState.setImagePaneNo(1);
+
+		if(appState.getImagePaneNo() == 0){
+			appState.setImagePaneNo(1);
+		}
+
 	}
 
 	public void saveMagnitude(){
+		saveImage(imageData.getFourierMagnitudeImage());
+	}
+
+	public void saveSelection(){
+		saveImage(imageData.getOutputInnerImage());
+	}
+
+	public void saveOutside(){
+		saveImage(imageData.getOutputOuterImage());
+	}
+
+	private void saveImage(Image image){
+
+		if(image == null){ return; }
+
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.getExtensionFilters().addAll(
 				new FileChooser.ExtensionFilter(appState.getFileExtension(), "*." + appState.getFileExtension())
@@ -70,7 +89,7 @@ public class FileAction extends Action {
 					file = new File(file.getAbsolutePath() + "." + appState.getFileExtension());
 				}
 
-				ImageIO.write(SwingFXUtils.fromFXImage(imageData.getFourierMagnitudeImage(),
+				ImageIO.write(SwingFXUtils.fromFXImage(image,
 						null), appState.getFileExtension(), file);
 
 			} catch (IOException e) {
@@ -78,7 +97,5 @@ public class FileAction extends Action {
 			}
 		}
 	}
-
-
 
 }

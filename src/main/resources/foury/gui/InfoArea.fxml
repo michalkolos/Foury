@@ -12,9 +12,9 @@
          fx:controller="foury.gui.InfoArea"
          VBox.vgrow="ALWAYS" maxWidth="Infinity">
 
-	<Label fx:id="label01"/>
+<!--	<Label fx:id="label01"/>-->
 	<Label fx:id="label02"/>
-	<Label fx:id="label03"/>
+<!--	<Label fx:id="label03"/>-->
 
 
 </fx:root>

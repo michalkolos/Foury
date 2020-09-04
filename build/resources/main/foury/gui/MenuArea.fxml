@@ -14,7 +14,13 @@
 			<Menu text="File">
 				<items>
 					<MenuItem text="Open" onAction="#handleOpenFile"/>
-					<MenuItem text="Save magnitude image" onAction="#handleSaveMagnitude"/>
+					<Menu text="Save">
+						<items>
+							<MenuItem fx:id="saveMagnitudeOption" text="Save Magnitude Image" onAction="#handleSaveMagnitude"/>
+							<MenuItem fx:id="saveSelectionOption" text="Save Selection" onAction="#handleSaveSelection"/>
+							<MenuItem fx:id="saveOutsideOption" text="Save Outside" onAction="#handleSaveOutside"/>
+						</items>
+					</Menu>
 					<SeparatorMenuItem />
 					<MenuItem text="Exit" onAction="#handleExitAction"/>
 				</items>

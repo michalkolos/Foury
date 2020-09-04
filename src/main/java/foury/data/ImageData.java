@@ -51,7 +51,14 @@ public class ImageData {
 		return outputMat;
 	}
 
-
+	public void reset(){
+		fourierMask = null;
+		fourierMagnitudeImage = null;
+		maskImage = null;
+		outputTotalImage = null;
+		outputInnerImage = null;
+		outputOuterImage = null;
+	}
 
 
 
@@ -108,7 +115,7 @@ public class ImageData {
 
 	public void setOriginalImage(Image originalImage) {
 		this.originalImage = originalImage;
-		this.readyToDisplay.set(true);
+//		this.readyToDisplay.set(true);
 		this.readyToCalculate.set(true);
 	}
 

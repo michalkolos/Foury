@@ -60,9 +60,8 @@ public class MainWindow implements Initializable {
 
 		imageData.readyToDisplayProperty().addListener((obs, oldVal, newVal) -> {
 			if(newVal) {
-				System.out.println("ReadyToDisplay listener triggered");
 
-				displayArea.updateImages();
+//				displayArea.updateImages();
 
 
 				imageData.setReadyToDisplay(false);
@@ -71,7 +70,8 @@ public class MainWindow implements Initializable {
 
 		imageData.readyToCalculateProperty().addListener((obs, oldVal, newVal) -> {
 			if(newVal) {
-				System.out.println("ReadyToCalculate listener triggered");
+
+				imageData.reset();
 
 				fourierAction.transform();
 
@@ -81,7 +81,6 @@ public class MainWindow implements Initializable {
 
 		imageData.readyToCalculateSelectionProperty().addListener((obs, oldVal, newVal) -> {
 			if(newVal) {
-				System.out.println("ReadyToCalculateSelection listener triggered");
 
 				fourierAction.transformSelections();
 
