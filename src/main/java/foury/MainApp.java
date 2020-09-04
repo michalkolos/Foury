@@ -19,7 +19,7 @@ public class MainApp extends Application {
 
 		scene.getStylesheets().add(getClass().getResource("gui/mainSceneStyle.css").toExternalForm());
 
-		stage.setTitle("miniDFT");
+		stage.setTitle("Foury");
 		stage.setScene(scene);
 		stage.setMaximized(true);
 		stage.show();
@@ -29,7 +29,10 @@ public class MainApp extends Application {
 
 		// load the native OpenCV library
 		nu.pattern.OpenCV.loadShared();
+//		nu.pattern.OpenCV.loadLocally();
+//		nu.pattern.OpenCV.loadLibrary();
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+//		System.loadLibrary(org.opencv.core.Core.NATIVE_LIBRARY_NAME);
 
 		launch(args);
 	}
